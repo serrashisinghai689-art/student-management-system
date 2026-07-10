@@ -1,0 +1,54 @@
+private void addStudent() {
+
+    try {
+
+        Student student = new Student();
+
+        System.out.print("First Name : ");
+        student.setFirstName(scanner.nextLine());
+
+        System.out.print("Last Name : ");
+        student.setLastName(scanner.nextLine());
+
+        System.out.print("Gender : ");
+        student.setGender(scanner.nextLine());
+
+        System.out.print("Age : ");
+        student.setAge(scanner.nextInt());
+        scanner.nextLine();
+
+        System.out.print("Email : ");
+        student.setEmail(scanner.nextLine());
+
+        System.out.print("Mobile : ");
+        student.setMobile(scanner.nextLine());
+
+        System.out.print("Course : ");
+        student.setCourse(scanner.nextLine());
+
+        System.out.print("City : ");
+        student.setCity(scanner.nextLine());
+
+        System.out.print("Percentage : ");
+        student.setPercentage(scanner.nextDouble());
+        scanner.nextLine();
+
+        boolean result = studentService.addStudent(student);
+
+        if (result) {
+            System.out.println("\nStudent Added Successfully.");
+        } else {
+            System.out.println("\nUnable to Add Student.");
+        }
+
+    } catch (StudentException e) {
+
+        System.out.println("\nValidation Error: " + e.getMessage());
+
+    } catch (Exception e) {
+
+        System.out.println("\nUnexpected Error: " + e.getMessage());
+
+    }
+
+}
