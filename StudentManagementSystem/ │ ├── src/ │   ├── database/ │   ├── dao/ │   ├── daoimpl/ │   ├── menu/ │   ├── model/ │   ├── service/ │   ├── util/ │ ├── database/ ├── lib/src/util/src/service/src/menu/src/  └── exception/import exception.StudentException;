@@ -1,0 +1,28 @@
+public boolean addStudent(Student student) throws StudentException {
+
+    if (!Validation.isValidName(student.getFirstName())) {
+        throw new StudentException("Invalid First Name.");
+    }
+
+    if (!Validation.isValidName(student.getLastName())) {
+        throw new StudentException("Invalid Last Name.");
+    }
+
+    if (!Validation.isValidEmail(student.getEmail())) {
+        throw new StudentException("Invalid Email Address.");
+    }
+
+    if (!Validation.isValidMobile(student.getMobile())) {
+        throw new StudentException("Invalid Mobile Number.");
+    }
+
+    if (!Validation.isValidAge(student.getAge())) {
+        throw new StudentException("Age should be between 16 and 40.");
+    }
+
+    if (!Validation.isValidPercentage(student.getPercentage())) {
+        throw new StudentException("Percentage should be between 0 and 100.");
+    }
+
+    return studentDAO.addStudent(student);
+}
