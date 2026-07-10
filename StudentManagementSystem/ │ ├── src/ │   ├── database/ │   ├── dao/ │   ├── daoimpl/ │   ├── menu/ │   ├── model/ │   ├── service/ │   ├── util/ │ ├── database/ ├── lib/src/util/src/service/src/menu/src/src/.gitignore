@@ -1,0 +1,23 @@
+# Compiled Java files
+*.class
+
+# VS Code
+.vscode/
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# IntelliJ
+.idea/
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+
+# Operating System files
+.DS_Store
+Thumbs.db
